@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Random Food App - Half Screen Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6A05A3; 
+            --light-bg-color: #fce4ec; 
+            --container-bg-color: #e0f2f7; 
+            --text-dark: #333;
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.15); 
+            --button-shadow: 0 12px 25px rgba(106, 5, 163, 0.4); 
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; 
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, var(--light-bg-color) 0%, #ffffff 100%);
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            text-align: center;
+            color: var(--text-dark);
+            overflow-x: hidden; 
+        }
+
+        .app-container {
+            background: var(--container-bg-color); 
+            padding: 30px 25px; 
+            border-radius: 30px; 
+            box-shadow: var(--shadow-soft);
+            width: 95%; 
+            max-width: 500px; 
+            height: 85vh; 
+            max-height: 800px; 
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-evenly; 
+            align-items: center; 
+            animation: fadeIn 1s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.6); 
+            backdrop-filter: blur(5px); 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .app-logo {
+        
+            width: 250vw; 
+            height: 250vw; 
+          
+            max-width: 250px;
+            max-height: 250px; 
+
+            border-radius: 50%; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+            background-color: white; 
+            padding: 10px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; 
+        }
+
+        .app-logo img {
+            width: 300%;
+            height: 130%;
+            object-fit: contain; 
+            border-radius: 0;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem; 
+            font-weight: 800;
+            margin-bottom: 5px; 
+            letter-spacing: 0.5px; 
+        }
+        
+        p {
+            font-size: 1.3rem; 
+            color: #666; 
+            font-weight: 400;
+            margin-top: 5px;
+            margin-bottom: 20px; 
+        }
+
+        .start-button {
+            display: block;
+            width: 90%; 
+            padding: 22px 30px; 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            color: white;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 15px; 
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--button-shadow);
+            letter-spacing: 1px;
+        }
+
+        .start-button:hover {
+            background-color: #8A2BE2; 
+            transform: translateY(-3px); 
+            box-shadow: 0 15px 30px rgba(106, 5, 163, 0.5); 
+        }
+
+        /* ปรับสำหรับจอเล็กสุด */
+        @media (max-width: 380px) {
+            .app-logo {
+                width: 60vw; /* อาจจะต้องใหญ่ขึ้นอีกบนจอเล็กมากเพื่อให้ดูเด่น */
+                height: 60vw;
+            }
+            /* ... อื่นๆ ... */
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="app-logo">
+            <img src="image/oo.png" alt="Random Food App Icon">
+        </div>
+
+        <h1>Random Food App</h1>
+        <p>เสี่ยงดวงมื้ออร่อย</p>
+
+        <a href="welcome.html" class="start-button">เริ่มใช้งาน</a>
+    </div>
+</body>
+</html>
